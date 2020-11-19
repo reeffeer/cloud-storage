@@ -1,0 +1,47 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox fx:id="Root" fx:controller="client.classes.LoginController" xmlns:fx="http://javafx.com/fxml">
+
+    <VBox HBox.hgrow="ALWAYS">
+        <HBox>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnSendFiles" text="Отправить файлы"
+            >
+                <onAction>#sendFiles</onAction>
+            </Button>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnDeleteLocalFiles" text="Удалить файлы"
+            >
+                <onAction>#deleteLocalFiles</onAction>
+            </Button>
+        </HBox>
+        <ListView fx:id="lstLocalFiles" VBox.vgrow="ALWAYS"/>
+        <HBox>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnConn" text="Подключиться к облаку"
+            >
+                <onAction>#connectToCloud</onAction>
+            </Button>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnDisconn" text="Отключиться от облака"
+            >
+                <onAction>#disconnectFromCloud</onAction>
+            </Button>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnExit" text="Выйти из приложения"
+            >
+                <onAction>#exitFromApp</onAction>
+            </Button>
+        </HBox>
+    </VBox>
+
+    <VBox HBox.hgrow="ALWAYS">
+        <HBox>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnDownloadFiles" text="Скачать файлы"
+            >
+                <onAction>#downloadFiles</onAction>
+            </Button>
+            <Button minWidth="200" maxWidth="200" prefWidth="200" fx:id="btnDeleteFilesInCloud" text="Удалить файлы"
+            >
+                <onAction>#deleteFilesInCloud</onAction>
+            </Button>
+        </HBox>
+        <ListView fx:id="lstFilesInCloud" VBox.vgrow="ALWAYS"/>
+    </VBox>
+
+</HBox>
